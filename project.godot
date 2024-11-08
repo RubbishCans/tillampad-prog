@@ -17,7 +17,7 @@ config/icon="res://assets/icon.svg"
 
 [autoload]
 
-EnemyDeathcounter="*res://enemy_deathcounter.gd"
+EDCount="*res://e_d_count.gd"
 
 [display]
 

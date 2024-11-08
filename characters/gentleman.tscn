@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://bnm7a1d3kqwf4"]
+[gd_scene load_steps=30 format=3 uid="uid://b7cuvb6lu136f"]
 
 [ext_resource type="Script" path="res://gentleman.gd" id="1_6tcbb"]
 [ext_resource type="Texture2D" uid="uid://ct66n84csb4n7" path="res://assets/custom_sprites-sheet.png" id="1_vkye8"]

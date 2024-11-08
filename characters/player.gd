@@ -1,12 +1,8 @@
 extends CharacterBody2D
 
 @onready var _animated_sprite = $AnimatedSprite2D
-@onready var particles = $GPUParticles2D
 
 const SPEED = 100.0
-
-func _ready() -> void:
-	particles.emitting = false
 
 func _physics_process(delta: float) -> void:
 	var direction := Input.get_vector("move_left", "move_right", "move_up", "move_down")
@@ -50,6 +46,4 @@ func _physics_process(delta: float) -> void:
 	
 
 func _on_area_2d_area_entered(area):
-	particles.emitting = true
-	await get_tree().create_timer(0.2).timeout
 	queue_free()
