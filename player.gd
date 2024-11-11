@@ -50,6 +50,8 @@ func _physics_process(delta: float) -> void:
 	
 
 func _on_area_2d_area_entered(area):
-	particles.emitting = true
-	await get_tree().create_timer(0.2).timeout
-	queue_free()
+	if area.is_in_group('gentleman'):
+		particles.emitting = true
+		await get_tree().create_timer(0.2).timeout
+		queue_free()
+		

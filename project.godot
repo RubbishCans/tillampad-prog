@@ -18,6 +18,7 @@ config/icon="res://assets/icon.svg"
 [autoload]
 
 EDCount="*res://e_d_count.gd"
+Global="*res://global.gd"
 
 [display]
 

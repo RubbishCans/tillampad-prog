@@ -1,13 +1,21 @@
 extends Node2D
 
 @onready var timer = $Timer
-@onready var labeltest = $Label
+@onready var sign = $Sign
 
 var enemy = preload("res://characters/enemy.tscn")
 
 func _ready() -> void:
 	timer.timeout.connect(_on_timer_timeout)
 	
+func _process(delta):
+	sign.text = Global.sign_text
+	sign.visible_ratio = Global.text_vis
+	
+	if Global.sign_text != "":
+		print("test")
+		var tween := create_tween()
+		tween.tween_property(sign, "visable_ratio", 1.0, 4.0)
 
 func _on_timer_timeout():
 	var random_position = enemy_random_position()
@@ -58,9 +66,9 @@ func enemy_random_position():
 		return enemy_random_position()
 	elif random_position.x >= 204 and random_position.x < 234 and random_position.y >= 190 and random_position.y < 218: #medium stone
 		return enemy_random_position()
-	elif random_position.x >= 236 and random_position.x < 238 and random_position.y >= 238 and random_position.y < 268: #bottom medium bush
+	elif random_position.x >= 238 and random_position.x < 270 and random_position.y >= 242 and random_position.y < 268: #bottom medium bush
 		return enemy_random_position()
-	elif random_position.x >= 292 and random_position.x < 274 and random_position.y >= 274 and random_position.y < 296: #bottom mini stone
+	elif random_position.x >= 292 and random_position.x < 322 and random_position.y >= 274 and random_position.y < 298: #bottom mini stone
 		return enemy_random_position()
 	else:
 		return random_position
