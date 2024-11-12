@@ -51,5 +51,11 @@ func _physics_process(delta: float) -> void:
 
 func _on_area_2d_area_entered(area):
 	particles.emitting = true
+<<<<<<< Updated upstream
 	await get_tree().create_timer(0.2).timeout
 	queue_free()
+=======
+	await get_tree().create_timer(0.15).timeout
+	#get_tree().change_scene_to_file("res://final_score.tscn")
+	#queue_free()
+>>>>>>> Stashed changes
