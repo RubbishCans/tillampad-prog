@@ -1,7 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://cc30ng1ijpty2"]
+[gd_scene load_steps=10 format=3 uid="uid://bxaqusawyksty"]
 
-[ext_resource type="Script" path="res://enemy.gd" id="1_4f7wi"]
 [ext_resource type="Texture2D" uid="uid://ct66n84csb4n7" path="res://assets/custom_sprites-sheet.png" id="1_ki36x"]
+[ext_resource type="Script" path="res://characters/enemy.gd" id="1_uxxou"]
 [ext_resource type="Texture2D" uid="uid://wj2cjvbc3t6b" path="res://assets/orange_explosion_35.png" id="3_frk45"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n4kor"]
@@ -39,7 +39,7 @@ scale_curve = SubResource("CurveTexture_cotq3")
 y_sort_enabled = true
 position = Vector2(0, -9)
 collision_layer = 2
-script = ExtResource("1_4f7wi")
+script = ExtResource("1_uxxou")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true

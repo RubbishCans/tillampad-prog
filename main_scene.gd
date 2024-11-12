@@ -54,7 +54,7 @@ func enemy_random_position():
 		return enemy_random_position()
 	elif random_position.x >= 344 and random_position.x < 373 and random_position.y >= 93 and random_position.y < 119: #top medium bush
 		return enemy_random_position()
-	elif random_position.x >= 276 and random_position.x < 304 and random_position.y >= 110 and random_position.y < 134: #top medium bush
+	elif random_position.x >= 276 and random_position.x < 304 and random_position.y >= 110 and random_position.y < 134: #top medium elevated bush
 		return enemy_random_position()
 	elif random_position.x >= 204 and random_position.x < 234 and random_position.y >= 190 and random_position.y < 218: #medium stone
 		return enemy_random_position()

@@ -1,6 +1,6 @@
-[gd_scene load_steps=30 format=3 uid="uid://b7cuvb6lu136f"]
+[gd_scene load_steps=30 format=3 uid="uid://dscdvqwvs2stm"]
 
-[ext_resource type="Script" path="res://gentleman.gd" id="1_6tcbb"]
+[ext_resource type="Script" path="res://characters/gentleman.gd" id="1_0h037"]
 [ext_resource type="Texture2D" uid="uid://ct66n84csb4n7" path="res://assets/custom_sprites-sheet.png" id="1_vkye8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nhj6p"]
@@ -310,7 +310,7 @@ size = Vector2(13, 17)
 
 [node name="Gentleman" type="CharacterBody2D"]
 y_sort_enabled = true
-script = ExtResource("1_6tcbb")
+script = ExtResource("1_0h037")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true
