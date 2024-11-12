@@ -827,12 +827,7 @@ sources/0 = SubResource("TileSetAtlasSource_8la3p")
 sources/1 = SubResource("TileSetAtlasSource_3mqeh")
 sources/2 = SubResource("TileSetAtlasSource_fde3b")
 
-<<<<<<< Updated upstream
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mhha6"]
-size = Vector2(12.907, 7.5)
-=======
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3166l"]
->>>>>>> Stashed changes
 
 [node name="TileMap" type="TileMap"]
 y_sort_enabled = true
@@ -859,15 +854,8 @@ script = ExtResource("4_s7vdx")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-<<<<<<< Updated upstream
-top_level = true
-y_sort_enabled = true
-position = Vector2(62, 118.25)
-shape = SubResource("RectangleShape2D_mhha6")
-=======
 position = Vector2(57.1382, 116.527)
 shape = SubResource("RectangleShape2D_3166l")
->>>>>>> Stashed changes
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

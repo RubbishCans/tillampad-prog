@@ -8,4 +8,4 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	text = 'Player enemy kills: ' + str(Global.e_d_count)
+	text = 'Player enemy kills: ' + str(EDCount.e_d_count)
