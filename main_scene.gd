@@ -79,3 +79,4 @@ func enemy_random_position():
 	else:
 		return random_position
 	
+
