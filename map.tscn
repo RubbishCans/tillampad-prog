@@ -828,6 +828,7 @@ sources/1 = SubResource("TileSetAtlasSource_3mqeh")
 sources/2 = SubResource("TileSetAtlasSource_fde3b")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xrq0x"]
+size = Vector2(11.7904, 6.85458)
 
 [node name="TileMap" type="TileMap"]
 y_sort_enabled = true
@@ -854,7 +855,8 @@ script = ExtResource("4_s7vdx")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(57.1382, 115.548)
+position = Vector2(55.7778, 116.038)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_xrq0x")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
