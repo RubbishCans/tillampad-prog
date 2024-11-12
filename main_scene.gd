@@ -12,14 +12,6 @@ func _ready() -> void:
 	tile_map.display_sign_text.connect(display_sign_text)
 	tile_map.hide_sign_text.connect(hide_sign_text)
 
-func _on_timer_timeout():
-	var random_position = enemy_random_position()
-		
-	var enemy_instance = enemy.instantiate()
-	add_child(enemy_instance)
-	enemy_instance.position = random_position
-
-
 func display_sign_text():
 	sign.visible_ratio = 0
 	sign.text = "The Dutch fear me; \nslight elevation"
@@ -30,6 +22,13 @@ func hide_sign_text():
 	visible_text_tween.kill()
 	sign.visible_ratio = 0
 	sign.text = ""
+	
+func _on_timer_timeout():
+	var random_position = enemy_random_position()
+		
+	var enemy_instance = enemy.instantiate()
+	add_child(enemy_instance)
+	enemy_instance.position = random_position
 
 func enemy_random_position():
 	var random_position := Vector2(0, 0)

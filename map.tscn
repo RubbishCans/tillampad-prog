@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://773ybbf5untw"]
+[gd_scene load_steps=11 format=3 uid="uid://773ybbf5untw"]
 
 [ext_resource type="Texture2D" uid="uid://cxs4rysxxjfk1" path="res://assets/fantasy_ [version 2.0]/forest_/forest_ [resources].png" id="2_lg8xx"]
 [ext_resource type="Texture2D" uid="uid://0ow2qqoh0nn1" path="res://assets/fantasy_ [version 2.0]/forest_/forest_.png" id="2_wvkh7"]
 [ext_resource type="Texture2D" uid="uid://xu42jyfj0a71" path="res://assets/fantasy_ [version 2.0]/forest_/forest_ [bridgeAnimatedTiles].png" id="3_wfwfm"]
+[ext_resource type="Script" path="res://map.gd" id="4_s7vdx"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tfxn7"]
 
@@ -848,9 +849,13 @@ layer_2/tile_data = PackedInt32Array(327685, 720896, 2, 393221, 262144, 4, 32768
 layer_3/name = "fun stuff"
 layer_3/y_sort_enabled = true
 layer_3/tile_data = PackedInt32Array(786435, 65537, 4, 131075, 65537, 2, 65539, 65537, 1, 458764, 196609, 4, 458763, 131073, 4, 393228, 196609, 3, 393227, 131073, 3, 458755, 65537, 8, 983055, 65537, 2, 917519, 65537, 1, 65549, 65537, 3, 196617, 65537, 4, 917510, 262145, 3, 589830, 65537, 2, 524294, 65537, 1, 262149, 65537, 4, 589825, 262145, 4)
+script = ExtResource("4_s7vdx")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(57.1382, 115.548)
 shape = SubResource("RectangleShape2D_xrq0x")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

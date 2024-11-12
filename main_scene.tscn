@@ -41,7 +41,7 @@ scale = Vector2(0.08, 0.08)
 theme = SubResource("Theme_xudge")
 script = ExtResource("5_bxob5")
 
-[node name="Label" type="Label" parent="."]
+[node name="Sign" type="Label" parent="."]
 top_level = true
 y_sort_enabled = true
 offset_left = 222.0
@@ -53,3 +53,5 @@ theme = SubResource("Theme_xudge")
 theme_override_font_sizes/font_size = 100
 text = "The Dutch fear me;
 slight elevation"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
