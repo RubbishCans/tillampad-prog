@@ -2,11 +2,17 @@ extends Node2D
 
 @onready var timer = $Timer
 @onready var sign = $Sign
+<<<<<<< Updated upstream
+=======
+@onready var tile_map = $TileMap
+>>>>>>> Stashed changes
 
+var visible_text_tween;
 var enemy = preload("res://characters/enemy.tscn")
 
 func _ready() -> void:
 	timer.timeout.connect(_on_timer_timeout)
+<<<<<<< Updated upstream
 	
 func _process(delta):
 	sign.text = Global.sign_text
@@ -16,6 +22,10 @@ func _process(delta):
 		print("test")
 		var tween := create_tween()
 		tween.tween_property(sign, "visable_ratio", 1.0, 4.0)
+=======
+	tile_map.display_sign_text.connect(display_sign_text)
+	tile_map.hide_sign_text.connect(hide_sign_text)
+>>>>>>> Stashed changes
 
 func _on_timer_timeout():
 	var random_position = enemy_random_position()
@@ -24,6 +34,18 @@ func _on_timer_timeout():
 	add_child(enemy_instance)
 	enemy_instance.position = random_position
 		
+
+func display_sign_text():
+	sign.visible_ratio = 0
+	sign.text = "The Dutch fear me; \nslight elevation"
+	visible_text_tween = create_tween()
+	visible_text_tween.tween_property(sign, "visible_ratio", 1.0, 2.0)
+
+func hide_sign_text():
+	visible_text_tween.kill()
+	sign.visible_ratio = 0
+	sign.text = ""
+
 func enemy_random_position():
 	var random_position := Vector2(0, 0)
 	

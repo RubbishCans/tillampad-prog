@@ -46,4 +46,10 @@ func _physics_process(delta: float) -> void:
 	
 
 func _on_area_2d_area_entered(area):
+<<<<<<< Updated upstream
 	queue_free()
+=======
+	particles.emitting = true
+	await get_tree().create_timer(0.2).timeout
+	#queue_free()
+>>>>>>> Stashed changes
