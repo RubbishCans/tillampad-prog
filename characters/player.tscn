@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://characters/player.gd" id="1_cmbh6"]
 [ext_resource type="Texture2D" uid="uid://ct66n84csb4n7" path="res://assets/custom_sprites-sheet.png" id="2_2w5se"]
-[ext_resource type="Texture2D" uid="uid://btaaesi7agq50" path="res://assets/custom_sprites-sheet_idle.png" id="3_2tajg"]
+[ext_resource type="Texture2D" path="res://assets/custom_sprites-sheet_idle.png" id="3_2tajg"]
 [ext_resource type="Texture2D" uid="uid://bar3wh3ve34ht" path="res://assets/explosion_red_35.png" id="3_he28q"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y55st"]
