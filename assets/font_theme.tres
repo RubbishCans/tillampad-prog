@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cmc0c7tvx53v"]
+
+[ext_resource type="FontFile" uid="uid://chqksbtm7ko3p" path="res://assets/monogram/monogram.ttf" id="1_mlcua"]
+
+[resource]
+default_font = ExtResource("1_mlcua")
+default_font_size = 200

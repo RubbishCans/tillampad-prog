@@ -8,7 +8,6 @@ var visible_text_tween;
 var enemy = preload("res://characters/enemy.tscn")
 
 func _ready() -> void:
-	timer.timeout.connect(_on_timer_timeout)
 	tile_map.display_sign_text.connect(display_sign_text)
 	tile_map.hide_sign_text.connect(hide_sign_text)
 
