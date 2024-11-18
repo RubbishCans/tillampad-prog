@@ -4,6 +4,9 @@ extends CharacterBody2D
 
 const SPEED = 95.0
 
+func _ready() -> void:
+	_animated_sprite.play("idle_S")
+
 func _physics_process(delta: float) -> void:
 	var direction := Input.get_vector("move_left2", "move_right2", "move_up2", "move_down2")
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bxaqusawyksty"]
+[gd_scene load_steps=11 format=3 uid="uid://bxaqusawyksty"]
 
 [ext_resource type="Texture2D" uid="uid://ct66n84csb4n7" path="res://assets/custom_sprites-sheet.png" id="1_ki36x"]
 [ext_resource type="Script" path="res://characters/enemy.gd" id="1_uxxou"]
@@ -27,9 +27,6 @@ animations = [{
 "speed": 3.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pb1p2"]
-size = Vector2(13, 17)
-
 [sub_resource type="Curve" id="Curve_8bhhm"]
 _data = [Vector2(0, 0.252747), 0.0, 0.0, 0, 0, Vector2(1, 0.252747), 0.0, 0.0, 0, 0]
 point_count = 2
@@ -53,10 +50,10 @@ script = ExtResource("1_uxxou")
 y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_0hb5h")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 y_sort_enabled = true
 position = Vector2(-0.5, 2.5)
-shape = SubResource("RectangleShape2D_pb1p2")
+polygon = PackedVector2Array(-3.5, -7.5, -3.5, -8.5, 3.5, -8.5, 3.5, -7.5, 5.5, -7.5, 5.5, 2.5, 4.5, 2.5, 4.5, 3.5, 5.5, 3.5, 5.5, 4.5, 6.5, 4.5, 6.5, 6.5, 5.5, 6.5, 5.5, 7.5, 4.5, 7.5, 4.5, 8.5, -4.5, 8.5, -4.5, 7.5, -5.5, 7.5, -5.5, 6.5, -6.5, 6.5, -6.5, 4.5, -5.5, 4.5, -5.5, 3.5, -4.5, 3.5, -4.5, 2.5, -5.5, 2.5, -5.5, 1.5, -6.5, 1.5, -6.5, -4.5, -5.5, -4.5, -5.5, -7.5)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 z_index = 1

@@ -7,6 +7,7 @@ const SPEED = 100.0
 
 func _ready() -> void:
 	particles.emitting = false
+	_animated_sprite.play("idle_S")
 
 func _physics_process(delta: float) -> void:
 	var direction := Input.get_vector("move_left", "move_right", "move_up", "move_down")

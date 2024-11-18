@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://dscdvqwvs2stm"]
+[gd_scene load_steps=38 format=3 uid="uid://dscdvqwvs2stm"]
 
 [ext_resource type="Script" path="res://characters/gentleman.gd" id="1_0h037"]
 [ext_resource type="Texture2D" uid="uid://ct66n84csb4n7" path="res://assets/custom_sprites-sheet.png" id="1_vkye8"]
@@ -360,10 +360,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n5xvu"]
-size = Vector2(11, 10)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6k520"]
-size = Vector2(13, 17)
+size = Vector2(12, 10)
 
 [node name="Gentleman" type="CharacterBody2D"]
 y_sort_enabled = true
@@ -372,19 +369,19 @@ script = ExtResource("1_0h037")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_qulg0")
-animation = &"idle_W"
+animation = &"idle_S"
+frame_progress = 0.986643
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 y_sort_enabled = true
-position = Vector2(-0.5, 6)
+position = Vector2(-1, 6)
 shape = SubResource("RectangleShape2D_n5xvu")
 
 [node name="Area2D" type="Area2D" parent="." groups=["gentleman"]]
 y_sort_enabled = true
 collision_layer = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
 y_sort_enabled = true
 position = Vector2(-0.5, 2.5)
-shape = SubResource("RectangleShape2D_6k520")
-debug_color = Color(0, 0.6, 0.701961, 0.419608)
+polygon = PackedVector2Array(-3.5, -8.5, 3.5, -8.5, 3.5, -7.5, 5.5, -7.5, 6.5, 2.5, 4.5, 2.5, 4.5, 3.5, 5.5, 3.5, 5.5, 4.5, 6.5, 4.5, 6.5, 6.5, 5.5, 6.5, 5.5, 7.5, 4.5, 7.5, 4.5, 8.5, -4.5, 8.5, -4.5, 7.5, -5.5, 7.5, -5.5, 6.5, -6.5, 6.5, -7.5, 4.5, -5.5, 4.5, -5.5, 3.5, -4.5, 3.5, -4.5, 2.5, -5.5, 2.5, -5.5, 1.5, -7.5, 1.5, -6.5, -4.5, -5.5, -4.5, -5.5, -7.5, -3.5, -7.5)

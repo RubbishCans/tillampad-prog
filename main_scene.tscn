@@ -37,17 +37,28 @@ offset_right = 1825.0
 offset_bottom = 291.0
 scale = Vector2(0.08, 0.08)
 theme = ExtResource("5_wo3pt")
+theme_override_colors/font_shadow_color = Color(0.690196, 0.67451, 0.635294, 1)
+theme_override_colors/font_outline_color = Color(0.690196, 0.67451, 0.635294, 1)
+theme_override_constants/shadow_offset_y = 20
+theme_override_constants/outline_size = 50
+theme_override_constants/shadow_outline_size = 50
+theme_override_font_sizes/font_size = 300
 script = ExtResource("5_bxob5")
 
 [node name="Sign" type="Label" parent="."]
 top_level = true
 y_sort_enabled = true
-offset_left = 222.0
-offset_top = 140.0
-offset_right = 2064.0
-offset_bottom = 689.0
+offset_left = 205.0
+offset_top = 131.0
+offset_right = 2185.0
+offset_bottom = 793.0
 scale = Vector2(0.08, 0.08)
 theme = ExtResource("5_wo3pt")
+theme_override_colors/font_shadow_color = Color(0.690196, 0.67451, 0.635294, 1)
+theme_override_colors/font_outline_color = Color(0.690196, 0.67451, 0.635294, 1)
+theme_override_constants/shadow_offset_y = 20
+theme_override_constants/outline_size = 50
+theme_override_constants/shadow_outline_size = 50
 theme_override_font_sizes/font_size = 200
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
