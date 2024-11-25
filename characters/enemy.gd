@@ -2,10 +2,14 @@ extends Area2D
 
 @onready var particles = $GPUParticles2D
 @onready var _animated_sprite = $AnimatedSprite2D
+var array = ["N", "NW", "NE", "W", "E", "S", "SW", "SE"]
 
 func _ready() -> void:
 	particles.emitting = false
-	_animated_sprite.play("default")
+	
+	var random
+	random = randi_range(0, 7)
+	_animated_sprite.play(array[random])
 
 func _on_area_entered(area):
 	particles.emitting = true

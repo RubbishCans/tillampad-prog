@@ -1,8 +1,73 @@
-[gd_scene load_steps=4 format=3 uid="uid://cbu2j07cxxwap"]
+[gd_scene load_steps=14 format=3 uid="uid://cbu2j07cxxwap"]
 
 [ext_resource type="Script" path="res://enemy_counter.gd" id="1_0d4qf"]
 [ext_resource type="Script" path="res://final_score.gd" id="1_eewkr"]
 [ext_resource type="Theme" uid="uid://cmc0c7tvx53v" path="res://assets/font_theme.tres" id="1_x34t0"]
+[ext_resource type="Texture2D" uid="uid://ct66n84csb4n7" path="res://assets/custom_sprites-sheet.png" id="4_34eb4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5a258"]
+atlas = ExtResource("4_34eb4")
+region = Rect2(64, 48, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cqqag"]
+atlas = ExtResource("4_34eb4")
+region = Rect2(80, 48, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pht1c"]
+atlas = ExtResource("4_34eb4")
+region = Rect2(96, 48, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7t61p"]
+atlas = ExtResource("4_34eb4")
+region = Rect2(112, 48, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ibgi"]
+atlas = ExtResource("4_34eb4")
+region = Rect2(0, 48, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ykqrn"]
+atlas = ExtResource("4_34eb4")
+region = Rect2(16, 48, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d44a6"]
+atlas = ExtResource("4_34eb4")
+region = Rect2(32, 48, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2gqsw"]
+atlas = ExtResource("4_34eb4")
+region = Rect2(48, 48, 16, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_li1m4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5a258")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cqqag")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pht1c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7t61p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ibgi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ykqrn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d44a6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2gqsw")
+}],
+"loop": true,
+"name": &"spin",
+"speed": 5.0
+}]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_eewkr")
@@ -28,3 +93,36 @@ theme_override_constants/outline_size = 50
 theme_override_constants/shadow_outline_size = 50
 theme_override_font_sizes/font_size = 500
 script = ExtResource("1_0d4qf")
+
+[node name="Replay" type="Button" parent="."]
+top_level = true
+y_sort_enabled = true
+offset_left = 189.0
+offset_top = 187.0
+offset_right = 387.0
+offset_bottom = 236.0
+theme = ExtResource("1_x34t0")
+theme_override_colors/font_hover_color = Color(0.690196, 0.67451, 0.635294, 1)
+theme_override_font_sizes/font_size = 50
+text = "Play Again"
+
+[node name="Quit" type="Button" parent="."]
+top_level = true
+y_sort_enabled = true
+offset_left = 246.0
+offset_top = 242.0
+offset_right = 330.0
+offset_bottom = 291.0
+theme = ExtResource("1_x34t0")
+theme_override_colors/font_hover_color = Color(0.690196, 0.67451, 0.635294, 1)
+theme_override_font_sizes/font_size = 50
+text = "Quit"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(133, 188)
+sprite_frames = SubResource("SpriteFrames_li1m4")
+animation = &"spin"
+
+[connection signal="pressed" from="Replay" to="." method="_on_replay_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

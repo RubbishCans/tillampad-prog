@@ -49,7 +49,6 @@ func _physics_process(delta: float) -> void:
 		_animated_sprite.play("idle_E")
 		
 	
-
 func _on_area_2d_area_entered(area):
 	if area.is_in_group('gentleman'):
 		particles.emitting = true

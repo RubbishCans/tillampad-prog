@@ -1,6 +1,5 @@
 extends TileMap
 
-
 signal display_sign_text
 signal hide_sign_text
 
