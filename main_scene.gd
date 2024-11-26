@@ -1,8 +1,9 @@
 extends Node2D
 
-@onready var timer = $Timer
+@onready var timer = $EnemyTimer
 @onready var signNL = $Sign
 @onready var tile_map = $TileMap
+@onready var pg_timer = $PGTimer
 
 var visible_text_tween;
 var enemy = preload("res://characters/enemy.tscn")
@@ -12,6 +13,7 @@ var gentleman = preload("res://characters/gentleman.tscn")
 func _ready() -> void:
 	tile_map.display_sign_text.connect(display_sign_text)
 	tile_map.hide_sign_text.connect(hide_sign_text)
+	
 
 func display_sign_text():
 	signNL.visible_ratio = 0
@@ -24,6 +26,9 @@ func hide_sign_text():
 	signNL.visible_ratio = 0
 	signNL.text = ""
 	
+func potion_pickup():
+	print("hi")
+	
 func _on_timer_timeout():
 	var random_position = _random_position()
 		
@@ -31,6 +36,17 @@ func _on_timer_timeout():
 	add_child(enemy_instance)
 	enemy_instance.position = random_position
 
+func _on_pg_timer_timeout():
+	var random_position = _random_position()
+	var player_instance = player.instantiate()
+	add_child(player_instance)
+	player_instance.position = random_position
+	
+	random_position = _random_position()
+	var gentleman_instance = gentleman.instantiate()
+	add_child(gentleman_instance)
+	gentleman_instance.position = random_position
+	
 func _random_position():
 	var random_position := Vector2(0, 0)
 	
@@ -80,6 +96,8 @@ func _random_position():
 	else:
 		return random_position
 	
+
+
 
 
 

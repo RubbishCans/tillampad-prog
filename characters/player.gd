@@ -3,13 +3,15 @@ extends CharacterBody2D
 @onready var _animated_sprite = $AnimatedSprite2D
 @onready var particles = $GPUParticles2D
 
-const SPEED = 100.0
+var speed_potion = preload("res://powers/speed_potion.tscn").instantiate()
+
+var SPEED = 100.0
 
 func _ready() -> void:
 	particles.emitting = false
 	_animated_sprite.play("idle_S")
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var direction := Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	
 	velocity = direction * SPEED
@@ -55,3 +57,4 @@ func _on_area_2d_area_entered(area):
 		await get_tree().create_timer(0.15).timeout
 		get_tree().change_scene_to_file("res://final_score.tscn")
 		queue_free()
+
