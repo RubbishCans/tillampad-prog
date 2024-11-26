@@ -1,12 +1,19 @@
 extends Node2D
 
-@onready var _animated_sprite = $AnimatedSprite2D
-
+@onready var _animated_player = $Playerspin
+@onready var _animated_gentleman = $Gentlemanspin
+@onready var _animated_enemy = $Enemyspin
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	_animated_sprite.play("spin")
+	_animated_player.play("spin")
+	_animated_player.scale = Vector2(5, 5)
 	
+	_animated_gentleman.play("spin")
+	_animated_gentleman.scale = Vector2(5, 5)
+	
+	_animated_enemy.play("spin")
+	_animated_enemy.scale = Vector2(2, 2)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
