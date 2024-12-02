@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://773ybbf5untw" path="res://map.tscn" id="2_mpnko"]
 [ext_resource type="Script" path="res://main_scene.gd" id="4_d2p07"]
+[ext_resource type="PackedScene" uid="uid://c3kcjiptpsmbi" path="res://powers/sweden_potion.tscn" id="5_5wpwm"]
 [ext_resource type="Script" path="res://enemy_counter.gd" id="5_bxob5"]
-[ext_resource type="PackedScene" uid="uid://dbxyc1mia5535" path="res://powers/speed_potion.tscn" id="5_ftktw"]
 [ext_resource type="Theme" uid="uid://cmc0c7tvx53v" path="res://assets/font_theme.tres" id="5_wo3pt"]
 
 [node name="Main" type="Node2D"]
@@ -18,7 +18,12 @@ wait_time = 1.5
 autostart = true
 
 [node name="PGTimer" type="Timer" parent="."]
+wait_time = 0.25
 one_shot = true
+autostart = true
+
+[node name="PotionTimer" type="Timer" parent="."]
+wait_time = 10.0
 autostart = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -59,8 +64,9 @@ theme_override_constants/outline_size = 50
 theme_override_constants/shadow_outline_size = 50
 theme_override_font_sizes/font_size = 200
 
-[node name="SpeedPotion" parent="." instance=ExtResource("5_ftktw")]
-position = Vector2(360, 159)
+[node name="SpeedPotion" parent="." instance=ExtResource("5_5wpwm")]
+position = Vector2(295, 220)
 
 [connection signal="timeout" from="EnemyTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="PGTimer" to="." method="_on_pg_timer_timeout"]
+[connection signal="timeout" from="PotionTimer" to="." method="_on_potion_timer_timeout"]

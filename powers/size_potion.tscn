@@ -1,0 +1,85 @@
+[gd_scene load_steps=11 format=3 uid="uid://b1lokk5x7sald"]
+
+[ext_resource type="Script" path="res://powers/potion.gd" id="1_0ik5c"]
+[ext_resource type="Texture2D" uid="uid://bkybhnpn86ath" path="res://assets/Potion_Pack/Blue Potions.png" id="2_sssda"]
+[ext_resource type="Theme" uid="uid://cmc0c7tvx53v" path="res://assets/font_theme.tres" id="3_cfl8q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gy34t"]
+atlas = ExtResource("2_sssda")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6l5uk"]
+atlas = ExtResource("2_sssda")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8i1o3"]
+atlas = ExtResource("2_sssda")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ma1c"]
+atlas = ExtResource("2_sssda")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gq3f0"]
+atlas = ExtResource("2_sssda")
+region = Rect2(16, 64, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5bf5h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gy34t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6l5uk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8i1o3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ma1c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gq3f0")
+}],
+"loop": false,
+"name": &"fill",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8mxkf"]
+line_spacing = 0.5
+outline_size = 2
+outline_color = Color(0.690196, 0.67451, 0.635294, 1)
+shadow_size = 3
+shadow_color = Color(0.690196, 0.67451, 0.635294, 1)
+shadow_offset = Vector2(0, 1)
+
+[node name="SizePotion" type="Area2D" groups=["sizepotion"]]
+y_sort_enabled = true
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_0ik5c")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_5bf5h")
+animation = &"fill"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-2, -6, -3, -6, -3, -7, -2, -7, -2, -8, 2, -8, 2, -7, 3, -7, 3, -6, 2, -6, 2, -5, 6, -5, 6, -4, 7, -4, 7, 5, 7, 7, 6, 7, 6, 8, -6, 8, -6, 7, -7, 7, -7, -4, -6, -4, -6, -5, -2, -5)
+
+[node name="Label" type="Label" parent="."]
+z_index = 1
+y_sort_enabled = true
+offset_left = -26.0
+offset_top = -36.0
+offset_right = 26.0
+offset_bottom = -1.0
+theme = ExtResource("3_cfl8q")
+theme_override_font_sizes/font_size = 20
+text = "Size Potion"
+label_settings = SubResource("LabelSettings_8mxkf")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

@@ -173,7 +173,7 @@ emission_sphere_radius = 10.0
 gravity = Vector3(0, 0, 0)
 scale_curve = SubResource("CurveTexture_cotq3")
 
-[node name="Enemy" type="Area2D"]
+[node name="Enemy" type="Area2D" groups=["enemy"]]
 y_sort_enabled = true
 position = Vector2(0, -9)
 collision_layer = 2

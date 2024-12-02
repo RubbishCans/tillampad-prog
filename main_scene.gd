@@ -10,10 +10,14 @@ var enemy = preload("res://characters/enemy.tscn")
 var player = preload("res://characters/player.tscn")
 var gentleman = preload("res://characters/gentleman.tscn")
 
+var speedpotion = preload("res://powers/speed_potion.tscn")
+var sizepotion = preload("res://powers/size_potion.tscn")
+var swedenpotion = preload("res://powers/sweden_potion.tscn")
+var potions = [speedpotion, sizepotion, swedenpotion]
+
 func _ready() -> void:
 	tile_map.display_sign_text.connect(display_sign_text)
 	tile_map.hide_sign_text.connect(hide_sign_text)
-	
 
 func display_sign_text():
 	signNL.visible_ratio = 0
@@ -25,9 +29,6 @@ func hide_sign_text():
 	visible_text_tween.kill()
 	signNL.visible_ratio = 0
 	signNL.text = ""
-	
-func potion_pickup():
-	print("hi")
 	
 func _on_timer_timeout():
 	var random_position = _random_position()
@@ -46,6 +47,15 @@ func _on_pg_timer_timeout():
 	var gentleman_instance = gentleman.instantiate()
 	add_child(gentleman_instance)
 	gentleman_instance.position = random_position
+	
+func _on_potion_timer_timeout():
+	var random_position = _random_position()
+	random_position = _random_position()
+	potions.pick_random()
+	
+	var potion_instance = potions.pick_random().instantiate()
+	add_child(potion_instance)
+	potion_instance.position = random_position
 	
 func _random_position():
 	var random_position := Vector2(0, 0)
@@ -96,6 +106,8 @@ func _random_position():
 	else:
 		return random_position
 	
+
+
 
 
 

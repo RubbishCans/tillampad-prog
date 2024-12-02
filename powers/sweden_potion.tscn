@@ -1,0 +1,89 @@
+[gd_scene load_steps=12 format=3 uid="uid://c3kcjiptpsmbi"]
+
+[ext_resource type="Script" path="res://powers/potion.gd" id="1_3hqek"]
+[ext_resource type="Texture2D" uid="uid://ci0c8iufiibbd" path="res://assets/Potion_Pack/Sweden Potions.png" id="2_5leqn"]
+[ext_resource type="Theme" uid="uid://cmc0c7tvx53v" path="res://assets/font_theme.tres" id="3_l06is"]
+[ext_resource type="AudioStream" uid="uid://io752cj5fk3n" path="res://assets/Sweden National Anthem (8-Bit Version & Lyrics).mp3" id="4_b5hqx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vcc7"]
+atlas = ExtResource("2_5leqn")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xsh5w"]
+atlas = ExtResource("2_5leqn")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uyqx6"]
+atlas = ExtResource("2_5leqn")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6fvd3"]
+atlas = ExtResource("2_5leqn")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f48en"]
+atlas = ExtResource("2_5leqn")
+region = Rect2(0, 64, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7fpth"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7vcc7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xsh5w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uyqx6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6fvd3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f48en")
+}],
+"loop": false,
+"name": &"fill",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8mxkf"]
+line_spacing = 0.5
+outline_size = 2
+outline_color = Color(0.690196, 0.67451, 0.635294, 1)
+shadow_size = 3
+shadow_color = Color(0.690196, 0.67451, 0.635294, 1)
+shadow_offset = Vector2(0, 1)
+
+[node name="SwedenPotion" type="Area2D" groups=["swedenpotion"]]
+y_sort_enabled = true
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_3hqek")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7fpth")
+animation = &"fill"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-2, -6, -3, -6, -3, -7, -2, -7, -2, -8, 2, -8, 2, -7, 3, -7, 3, -6, 2, -6, 2, -4, 4, -4, 4, -3, 5, -3, 5, -2, 6, -2, 6, 0, 7, 0, 7, 3, 6, 3, 6, 5, 5, 5, 5, 6, 4, 6, 4, 7, 2, 7, 2, 8, -2, 8, -2, 7, -4, 7, -4, 6, -5, 6, -5, 5, -6, 5, -6, 3, -7, 3, -7, 0, -6, 0, -6, -2, -5, -2, -5, -3, -4, -3, -4, -4, -2, -4)
+
+[node name="Label" type="Label" parent="."]
+z_index = 1
+y_sort_enabled = true
+offset_left = -26.0
+offset_top = -36.0
+offset_right = 26.0
+offset_bottom = -1.0
+theme = ExtResource("3_l06is")
+theme_override_font_sizes/font_size = 20
+text = "Sweden Potion"
+label_settings = SubResource("LabelSettings_8mxkf")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="SwedenAnthem" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_b5hqx")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
