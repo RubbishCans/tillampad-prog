@@ -1,9 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://c3kcjiptpsmbi"]
+[gd_scene load_steps=11 format=3 uid="uid://c3kcjiptpsmbi"]
 
-[ext_resource type="Script" path="res://powers/potion.gd" id="1_3hqek"]
+[ext_resource type="Script" path="res://powers/potion.gd" id="1_v2pig"]
 [ext_resource type="Texture2D" uid="uid://ci0c8iufiibbd" path="res://assets/Potion_Pack/Sweden Potions.png" id="2_5leqn"]
 [ext_resource type="Theme" uid="uid://cmc0c7tvx53v" path="res://assets/font_theme.tres" id="3_l06is"]
-[ext_resource type="AudioStream" uid="uid://io752cj5fk3n" path="res://assets/Sweden National Anthem (8-Bit Version & Lyrics).mp3" id="4_b5hqx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7vcc7"]
 atlas = ExtResource("2_5leqn")
@@ -56,11 +55,11 @@ shadow_size = 3
 shadow_color = Color(0.690196, 0.67451, 0.635294, 1)
 shadow_offset = Vector2(0, 1)
 
-[node name="SwedenPotion" type="Area2D" groups=["swedenpotion"]]
+[node name="SwedenPotion" type="Area2D" groups=["potion", "swedenpotion"]]
 y_sort_enabled = true
 collision_layer = 4
 collision_mask = 4
-script = ExtResource("1_3hqek")
+script = ExtResource("1_v2pig")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_7fpth")
@@ -82,8 +81,5 @@ text = "Sweden Potion"
 label_settings = SubResource("LabelSettings_8mxkf")
 horizontal_alignment = 1
 autowrap_mode = 2
-
-[node name="SwedenAnthem" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_b5hqx")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

@@ -50,7 +50,6 @@ func _physics_process(_delta: float) -> void:
 		_animated_sprite.play("idle_E")
 		
 	
-
 func _on_area_2d_area_entered(area):
 	if area.is_in_group('gentleman'):
 		particles.emitting = true
@@ -64,7 +63,9 @@ func _on_area_2d_area_entered(area):
 		SPEED = 100
 	elif area.is_in_group("sizepotion"):
 		scale = Vector2(1.5, 1.5)
+		SPEED = 110
 		await get_tree().create_timer(10.0).timeout
 		scale = Vector2(1,1)
+		SPEED = 100
 	elif area.is_in_group("swedenpotion"):
-		Global.sweden_anthem.emit()
+		Global.play_anthem.emit()

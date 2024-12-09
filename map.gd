@@ -1,15 +1,18 @@
 extends TileMap
 
-signal display_sign_text
-signal hide_sign_text
+@onready var anthem = $SwedenAnthem
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
+	Global.play_anthem.connect(play_anthem)
+	
+func play_anthem():
+	anthem.play()
 
 func _on_area_2d_area_entered(_area):
-	display_sign_text.emit()
+	Global.display_sign_text.emit()
 
 func _on_area_2d_area_exited(_area):
-	hide_sign_text.emit()
+	Global.hide_sign_text.emit()
 

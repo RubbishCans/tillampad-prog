@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://773ybbf5untw"]
+[gd_scene load_steps=12 format=3 uid="uid://773ybbf5untw"]
 
 [ext_resource type="Texture2D" uid="uid://cxs4rysxxjfk1" path="res://assets/fantasy_ [version 2.0]/forest_/forest_ [resources].png" id="2_lg8xx"]
 [ext_resource type="Texture2D" uid="uid://0ow2qqoh0nn1" path="res://assets/fantasy_ [version 2.0]/forest_/forest_.png" id="2_wvkh7"]
 [ext_resource type="Texture2D" uid="uid://xu42jyfj0a71" path="res://assets/fantasy_ [version 2.0]/forest_/forest_ [bridgeAnimatedTiles].png" id="3_wfwfm"]
 [ext_resource type="Script" path="res://map.gd" id="4_s7vdx"]
+[ext_resource type="AudioStream" uid="uid://io752cj5fk3n" path="res://assets/Sweden National Anthem (8-Bit Version & Lyrics).mp3" id="5_7gqyp"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tfxn7"]
 
@@ -857,6 +858,9 @@ script = ExtResource("4_s7vdx")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(55.7778, 116.038)
 shape = SubResource("RectangleShape2D_xrq0x")
+
+[node name="SwedenAnthem" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_7gqyp")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

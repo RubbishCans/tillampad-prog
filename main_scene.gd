@@ -16,8 +16,9 @@ var swedenpotion = preload("res://powers/sweden_potion.tscn")
 var potions = [speedpotion, sizepotion, swedenpotion]
 
 func _ready() -> void:
-	tile_map.display_sign_text.connect(display_sign_text)
-	tile_map.hide_sign_text.connect(hide_sign_text)
+	Global.display_sign_text.connect(display_sign_text)
+	Global.hide_sign_text.connect(hide_sign_text)
+	Global.new_enemy.connect(new_enemy)
 
 func display_sign_text():
 	signNL.visible_ratio = 0
@@ -30,11 +31,14 @@ func hide_sign_text():
 	signNL.visible_ratio = 0
 	signNL.text = ""
 	
+func new_enemy():
+	_on_timer_timeout()
+
 func _on_timer_timeout():
 	var random_position = _random_position()
 		
 	var enemy_instance = enemy.instantiate()
-	add_child(enemy_instance)
+	call_deferred("add_child", enemy_instance)
 	enemy_instance.position = random_position
 
 func _on_pg_timer_timeout():
@@ -105,11 +109,3 @@ func _random_position():
 		return _random_position()
 	else:
 		return random_position
-	
-
-
-
-
-
-
-

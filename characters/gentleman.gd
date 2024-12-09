@@ -54,5 +54,9 @@ func _on_area_2d_area_entered(area):
 		SPEED = 90
 	elif area.is_in_group("sizepotion"):
 		scale = Vector2(1.2, 1.2)
+		SPEED = 100
 		await get_tree().create_timer(10.0).timeout
-		scale = Vector2(2,2)
+		scale = Vector2(1,1)
+		SPEED = 90
+	elif area.is_in_group("swedenpotion"):
+		Global.play_anthem.emit()
