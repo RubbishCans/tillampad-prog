@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://powers/potion.gd" id="1_csnfb"]
 [ext_resource type="Texture2D" uid="uid://byb8rnsgf6rpj" path="res://assets/Potion_Pack/Cyan Potions.png" id="1_kr8uy"]
-[ext_resource type="Theme" uid="uid://cmc0c7tvx53v" path="res://assets/font_theme.tres" id="3_xbm0t"]
+[ext_resource type="Theme" uid="uid://dehu837rdpqfr" path="res://assets/button_theme.tres" id="3_s72op"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nl5be"]
 atlas = ExtResource("1_kr8uy")
@@ -75,7 +75,7 @@ offset_left = -26.0
 offset_top = -36.0
 offset_right = 26.0
 offset_bottom = -1.0
-theme = ExtResource("3_xbm0t")
+theme = ExtResource("3_s72op")
 theme_override_font_sizes/font_size = 20
 text = "Speed Potion"
 label_settings = SubResource("LabelSettings_8mxkf")

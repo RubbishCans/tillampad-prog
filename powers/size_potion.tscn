@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://powers/potion.gd" id="1_0ik5c"]
 [ext_resource type="Texture2D" uid="uid://bkybhnpn86ath" path="res://assets/Potion_Pack/Blue Potions.png" id="2_sssda"]
-[ext_resource type="Theme" uid="uid://cmc0c7tvx53v" path="res://assets/font_theme.tres" id="3_cfl8q"]
+[ext_resource type="Theme" uid="uid://dehu837rdpqfr" path="res://assets/button_theme.tres" id="3_4jkcu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gy34t"]
 atlas = ExtResource("2_sssda")
@@ -75,7 +75,7 @@ offset_left = -26.0
 offset_top = -36.0
 offset_right = 26.0
 offset_bottom = -1.0
-theme = ExtResource("3_cfl8q")
+theme = ExtResource("3_4jkcu")
 theme_override_font_sizes/font_size = 20
 text = "Size Potion"
 label_settings = SubResource("LabelSettings_8mxkf")

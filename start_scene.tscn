@@ -1,0 +1,128 @@
+[gd_scene load_steps=9 format=3 uid="uid://cet1sldpvrchg"]
+
+[ext_resource type="Script" path="res://start_scene.gd" id="1_mkhdy"]
+[ext_resource type="Theme" uid="uid://dehu837rdpqfr" path="res://assets/button_theme.tres" id="2_x3obi"]
+[ext_resource type="Texture2D" uid="uid://cx3wboiwg60nm" path="res://assets/star.png" id="3_eyyv1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_et8vq"]
+atlas = ExtResource("3_eyyv1")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uc1o5"]
+atlas = ExtResource("3_eyyv1")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1kfxp"]
+atlas = ExtResource("3_eyyv1")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38y8y"]
+atlas = ExtResource("3_eyyv1")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e1w7v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_et8vq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uc1o5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1kfxp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38y8y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1kfxp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uc1o5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mkhdy")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="Creator" type="Label" parent="."]
+layout_mode = 0
+offset_left = 360.0
+offset_top = 176.0
+offset_right = 797.0
+offset_bottom = 217.0
+theme = ExtResource("2_x3obi")
+theme_override_colors/font_shadow_color = Color(0.690196, 0.67451, 0.635294, 1)
+theme_override_colors/font_outline_color = Color(0.690196, 0.67451, 0.635294, 1)
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 3
+theme_override_font_sizes/font_size = 50
+text = "RubbishStudios presents"
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+offset_left = 176.0
+offset_top = 240.0
+offset_right = 974.0
+offset_bottom = 322.0
+theme = ExtResource("2_x3obi")
+theme_override_colors/font_shadow_color = Color(0.690196, 0.67451, 0.635294, 1)
+theme_override_colors/font_outline_color = Color(0.690196, 0.67451, 0.635294, 1)
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 15
+theme_override_constants/shadow_outline_size = 10
+theme_override_font_sizes/font_size = 100
+text = "Hunted by the Gentle"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="TagLine" type="Label" parent="."]
+layout_mode = 1
+offset_left = 352.0
+offset_top = 328.0
+offset_right = 792.0
+offset_bottom = 413.0
+theme = ExtResource("2_x3obi")
+theme_override_colors/font_shadow_color = Color(0.690196, 0.67451, 0.635294, 1)
+theme_override_colors/font_outline_color = Color(0.690196, 0.67451, 0.635294, 1)
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 3
+theme_override_font_sizes/font_size = 50
+text = "In which the hunter becomes the hunted"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Star" type="AnimatedSprite2D" parent="."]
+position = Vector2(952, 272)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_e1w7v")
+
+[node name="Start" type="Button" parent="."]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 472.0
+offset_right = 631.0
+offset_bottom = 521.0
+theme = ExtResource("2_x3obi")
+theme_override_colors/font_pressed_color = Color(0.988235, 0.317647, 0.521569, 1)
+theme_override_colors/font_hover_color = Color(0.247059, 0.756863, 0.788235, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.988235, 0.317647, 0.521569, 1)
+theme_override_font_sizes/font_size = 50
+text = "Start"
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]

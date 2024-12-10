@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 @onready var _animated_player = $Playerspin
 @onready var _animated_gentleman = $Gentlemanspin
@@ -14,13 +14,14 @@ func _ready():
 	
 	_animated_enemy.play("spin")
 	_animated_enemy.scale = Vector2(2, 2)
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 func _on_replay_pressed():
 	Global.e_d_count = 0
-	get_tree().change_scene_to_file("res://main_scene.tscn")
+	get_tree().change_scene_to_file("res://map_selector.tscn")
 
 func _on_quit_pressed():
 	get_tree().quit()

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://powers/potion.gd" id="1_v2pig"]
 [ext_resource type="Texture2D" uid="uid://ci0c8iufiibbd" path="res://assets/Potion_Pack/Sweden Potions.png" id="2_5leqn"]
-[ext_resource type="Theme" uid="uid://cmc0c7tvx53v" path="res://assets/font_theme.tres" id="3_l06is"]
+[ext_resource type="Theme" uid="uid://dehu837rdpqfr" path="res://assets/button_theme.tres" id="3_v3vcn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7vcc7"]
 atlas = ExtResource("2_5leqn")
@@ -75,7 +75,7 @@ offset_left = -26.0
 offset_top = -36.0
 offset_right = 26.0
 offset_bottom = -1.0
-theme = ExtResource("3_l06is")
+theme = ExtResource("3_v3vcn")
 theme_override_font_sizes/font_size = 20
 text = "Sweden Potion"
 label_settings = SubResource("LabelSettings_8mxkf")
