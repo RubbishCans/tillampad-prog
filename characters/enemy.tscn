@@ -183,7 +183,7 @@ script = ExtResource("1_uxxou")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_0hb5h")
-animation = &"E"
+animation = &"SW"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 y_sort_enabled = true

@@ -67,9 +67,10 @@ offset_bottom = 217.0
 theme = ExtResource("2_x3obi")
 theme_override_colors/font_shadow_color = Color(0.690196, 0.67451, 0.635294, 1)
 theme_override_colors/font_outline_color = Color(0.690196, 0.67451, 0.635294, 1)
+theme_override_constants/shadow_offset_x = 0
 theme_override_constants/shadow_offset_y = 3
 theme_override_constants/outline_size = 5
-theme_override_constants/shadow_outline_size = 3
+theme_override_constants/shadow_outline_size = 5
 theme_override_font_sizes/font_size = 50
 text = "RubbishStudios presents"
 
@@ -82,8 +83,9 @@ offset_bottom = 322.0
 theme = ExtResource("2_x3obi")
 theme_override_colors/font_shadow_color = Color(0.690196, 0.67451, 0.635294, 1)
 theme_override_colors/font_outline_color = Color(0.690196, 0.67451, 0.635294, 1)
+theme_override_constants/shadow_offset_x = 0
 theme_override_constants/shadow_offset_y = 5
-theme_override_constants/outline_size = 15
+theme_override_constants/outline_size = 10
 theme_override_constants/shadow_outline_size = 10
 theme_override_font_sizes/font_size = 100
 text = "Hunted by the Gentle"
@@ -99,9 +101,10 @@ offset_bottom = 413.0
 theme = ExtResource("2_x3obi")
 theme_override_colors/font_shadow_color = Color(0.690196, 0.67451, 0.635294, 1)
 theme_override_colors/font_outline_color = Color(0.690196, 0.67451, 0.635294, 1)
+theme_override_constants/shadow_offset_x = 0
 theme_override_constants/shadow_offset_y = 3
-theme_override_constants/outline_size = 10
-theme_override_constants/shadow_outline_size = 3
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
 theme_override_font_sizes/font_size = 50
 text = "In which the hunter becomes the hunted"
 horizontal_alignment = 1
@@ -114,9 +117,9 @@ sprite_frames = SubResource("SpriteFrames_e1w7v")
 
 [node name="Start" type="Button" parent="."]
 layout_mode = 0
-offset_left = 528.0
+offset_left = 384.0
 offset_top = 472.0
-offset_right = 631.0
+offset_right = 506.0
 offset_bottom = 521.0
 theme = ExtResource("2_x3obi")
 theme_override_colors/font_pressed_color = Color(0.988235, 0.317647, 0.521569, 1)
@@ -125,4 +128,32 @@ theme_override_colors/font_hover_pressed_color = Color(0.988235, 0.317647, 0.521
 theme_override_font_sizes/font_size = 50
 text = "Start"
 
+[node name="Rules" type="Button" parent="."]
+layout_mode = 0
+offset_left = 525.0
+offset_top = 472.0
+offset_right = 628.0
+offset_bottom = 521.0
+theme = ExtResource("2_x3obi")
+theme_override_colors/font_pressed_color = Color(0.988235, 0.317647, 0.521569, 1)
+theme_override_colors/font_hover_color = Color(0.247059, 0.756863, 0.788235, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.988235, 0.317647, 0.521569, 1)
+theme_override_font_sizes/font_size = 50
+text = "Rules"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 648.0
+offset_top = 472.0
+offset_right = 732.0
+offset_bottom = 521.0
+theme = ExtResource("2_x3obi")
+theme_override_colors/font_pressed_color = Color(0.988235, 0.317647, 0.521569, 1)
+theme_override_colors/font_hover_color = Color(0.247059, 0.756863, 0.788235, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.988235, 0.317647, 0.521569, 1)
+theme_override_font_sizes/font_size = 50
+text = "Quit"
+
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Rules" to="." method="_on_rules_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

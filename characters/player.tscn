@@ -385,7 +385,7 @@ script = ExtResource("1_cmbh6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_d85vc")
-animation = &"idle_S"
+animation = &"run_W"
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 y_sort_enabled = true

@@ -1,43 +1,43 @@
-[gd_scene load_steps=32 format=3 uid="uid://cbu2j07cxxwap"]
+[gd_scene load_steps=32 format=3 uid="uid://knd1lrywwnbn"]
 
-[ext_resource type="Script" path="res://enemy_counter.gd" id="1_0d4qf"]
-[ext_resource type="Script" path="res://final_score.gd" id="1_eewkr"]
-[ext_resource type="Theme" uid="uid://dehu837rdpqfr" path="res://assets/button_theme.tres" id="2_7axs8"]
-[ext_resource type="Texture2D" uid="uid://ct66n84csb4n7" path="res://assets/custom_sprites-sheet.png" id="4_34eb4"]
+[ext_resource type="Theme" uid="uid://cmc0c7tvx53v" path="res://assets/font_theme.tres" id="1_f0c45"]
+[ext_resource type="Script" path="res://rules.gd" id="1_swmh6"]
+[ext_resource type="Theme" uid="uid://dehu837rdpqfr" path="res://assets/button_theme.tres" id="2_8ylmb"]
+[ext_resource type="Texture2D" uid="uid://ct66n84csb4n7" path="res://assets/custom_sprites-sheet.png" id="3_ujy7g"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5a258"]
-atlas = ExtResource("4_34eb4")
+atlas = ExtResource("3_ujy7g")
 region = Rect2(64, 48, 16, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cqqag"]
-atlas = ExtResource("4_34eb4")
+atlas = ExtResource("3_ujy7g")
 region = Rect2(80, 48, 16, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pht1c"]
-atlas = ExtResource("4_34eb4")
+atlas = ExtResource("3_ujy7g")
 region = Rect2(96, 48, 16, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7t61p"]
-atlas = ExtResource("4_34eb4")
+atlas = ExtResource("3_ujy7g")
 region = Rect2(112, 48, 16, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1ibgi"]
-atlas = ExtResource("4_34eb4")
+atlas = ExtResource("3_ujy7g")
 region = Rect2(0, 48, 16, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ykqrn"]
-atlas = ExtResource("4_34eb4")
+atlas = ExtResource("3_ujy7g")
 region = Rect2(16, 48, 16, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d44a6"]
-atlas = ExtResource("4_34eb4")
+atlas = ExtResource("3_ujy7g")
 region = Rect2(32, 48, 16, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2gqsw"]
-atlas = ExtResource("4_34eb4")
+atlas = ExtResource("3_ujy7g")
 region = Rect2(48, 48, 16, 24)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_li1m4"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_les5v"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -70,38 +70,38 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pgovy"]
-atlas = ExtResource("4_34eb4")
+atlas = ExtResource("3_ujy7g")
 region = Rect2(64, 144, 16, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d41v4"]
-atlas = ExtResource("4_34eb4")
+atlas = ExtResource("3_ujy7g")
 region = Rect2(48, 144, 16, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_taq26"]
-atlas = ExtResource("4_34eb4")
+atlas = ExtResource("3_ujy7g")
 region = Rect2(32, 144, 16, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_66soh"]
-atlas = ExtResource("4_34eb4")
+atlas = ExtResource("3_ujy7g")
 region = Rect2(16, 144, 16, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iycfq"]
-atlas = ExtResource("4_34eb4")
+atlas = ExtResource("3_ujy7g")
 region = Rect2(0, 144, 16, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t081k"]
-atlas = ExtResource("4_34eb4")
+atlas = ExtResource("3_ujy7g")
 region = Rect2(112, 144, 16, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8tdmj"]
-atlas = ExtResource("4_34eb4")
+atlas = ExtResource("3_ujy7g")
 region = Rect2(96, 144, 16, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v8j1o"]
-atlas = ExtResource("4_34eb4")
+atlas = ExtResource("3_ujy7g")
 region = Rect2(80, 144, 16, 24)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_ldkx1"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_0aa88"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -134,38 +134,38 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pg6kk"]
-atlas = ExtResource("4_34eb4")
+atlas = ExtResource("3_ujy7g")
 region = Rect2(64, 240, 16, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j7i7i"]
-atlas = ExtResource("4_34eb4")
+atlas = ExtResource("3_ujy7g")
 region = Rect2(80, 240, 16, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nea53"]
-atlas = ExtResource("4_34eb4")
+atlas = ExtResource("3_ujy7g")
 region = Rect2(96, 240, 16, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ugxf8"]
-atlas = ExtResource("4_34eb4")
+atlas = ExtResource("3_ujy7g")
 region = Rect2(112, 240, 16, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ja8n0"]
-atlas = ExtResource("4_34eb4")
+atlas = ExtResource("3_ujy7g")
 region = Rect2(0, 240, 16, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mxe8i"]
-atlas = ExtResource("4_34eb4")
+atlas = ExtResource("3_ujy7g")
 region = Rect2(16, 240, 16, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e7rnw"]
-atlas = ExtResource("4_34eb4")
+atlas = ExtResource("3_ujy7g")
 region = Rect2(32, 240, 16, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ffgln"]
-atlas = ExtResource("4_34eb4")
+atlas = ExtResource("3_ujy7g")
 region = Rect2(48, 240, 16, 24)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_5g2xm"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_jrame"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -221,59 +221,49 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Control" type="Control"]
+[node name="Rules" type="Control"]
 layout_mode = 3
-anchors_preset = 0
-script = ExtResource("1_eewkr")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_swmh6")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(288, 162)
-zoom = Vector2(2, 2)
+anchor_mode = 0
 
-[node name="EnemyCounter" type="Label" parent="."]
-top_level = true
-y_sort_enabled = true
+[node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 116.0
-offset_top = 88.0
-offset_right = 5066.0
-offset_bottom = 1126.0
-scale = Vector2(0.08, 0.08)
-size_flags_horizontal = 4
-theme = ExtResource("2_7axs8")
+offset_left = 64.0
+offset_top = 24.0
+offset_right = 1088.0
+offset_bottom = 536.0
+theme = ExtResource("1_f0c45")
 theme_override_colors/font_shadow_color = Color(0.690196, 0.67451, 0.635294, 1)
 theme_override_colors/font_outline_color = Color(0.690196, 0.67451, 0.635294, 1)
-theme_override_constants/shadow_offset_y = 20
-theme_override_constants/outline_size = 50
-theme_override_constants/shadow_outline_size = 50
-theme_override_font_sizes/font_size = 500
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_font_sizes/font_size = 70
+text = "Player: WASD
+Enemy: Arrow-keys
+
+Player's goal: To kill Enemies 
+Gentleman's goal: To kill Player
+
+The game ends when Player dies"
+horizontal_alignment = 1
 autowrap_mode = 3
-script = ExtResource("1_0d4qf")
 
-[node name="Replay" type="Button" parent="."]
-top_level = true
-y_sort_enabled = true
+[node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 189.0
-offset_top = 187.0
-offset_right = 387.0
-offset_bottom = 236.0
-theme = ExtResource("2_7axs8")
-theme_override_colors/font_pressed_color = Color(0.988235, 0.317647, 0.521569, 1)
-theme_override_colors/font_hover_color = Color(0.247059, 0.756863, 0.788235, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.988235, 0.317647, 0.521569, 1)
-theme_override_font_sizes/font_size = 50
-text = "Play Again"
-
-[node name="Quit" type="Button" parent="."]
-top_level = true
-y_sort_enabled = true
-layout_mode = 0
-offset_left = 160.0
-offset_top = 248.0
-offset_right = 415.0
-offset_bottom = 297.0
-theme = ExtResource("2_7axs8")
+offset_left = 448.0
+offset_top = 472.0
+offset_right = 703.0
+offset_bottom = 521.0
+theme = ExtResource("2_8ylmb")
 theme_override_colors/font_pressed_color = Color(0.988235, 0.317647, 0.521569, 1)
 theme_override_colors/font_hover_color = Color(0.247059, 0.756863, 0.788235, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.988235, 0.317647, 0.521569, 1)
@@ -282,20 +272,18 @@ text = "Back to Start"
 
 [node name="Playerspin" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true
-position = Vector2(128, 192)
-sprite_frames = SubResource("SpriteFrames_li1m4")
+position = Vector2(784, 48)
+sprite_frames = SubResource("SpriteFrames_les5v")
 animation = &"spin"
 
 [node name="Gentlemanspin" type="AnimatedSprite2D" parent="."]
-position = Vector2(448, 192)
-sprite_frames = SubResource("SpriteFrames_ldkx1")
+position = Vector2(848, 112)
+sprite_frames = SubResource("SpriteFrames_0aa88")
 animation = &"spin"
-frame_progress = 0.439526
 
 [node name="Enemyspin" type="AnimatedSprite2D" parent="."]
-position = Vector2(96, 96)
-sprite_frames = SubResource("SpriteFrames_5g2xm")
+position = Vector2(1032, 232)
+sprite_frames = SubResource("SpriteFrames_jrame")
 animation = &"spin"
 
-[connection signal="pressed" from="Replay" to="." method="_on_replay_pressed"]
-[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

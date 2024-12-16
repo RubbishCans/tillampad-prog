@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @onready var _animated_sprite = $AnimatedSprite2D
 
-var SPEED = 90.0
+var SPEED = 95.0
 
 func _ready() -> void:
 	_animated_sprite.play("idle_S")
@@ -49,14 +49,14 @@ func _physics_process(_delta: float) -> void:
 
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("speedpotion"):
-		SPEED = 110
+		SPEED = 115
 		await get_tree().create_timer(10.0).timeout
-		SPEED = 90
+		SPEED = 95
 	elif area.is_in_group("sizepotion"):
 		scale = Vector2(1.2, 1.2)
-		SPEED = 100
+		SPEED = 105
 		await get_tree().create_timer(10.0).timeout
 		scale = Vector2(1,1)
-		SPEED = 90
+		SPEED = 95
 	elif area.is_in_group("swedenpotion"):
 		Global.play_anthem.emit()
